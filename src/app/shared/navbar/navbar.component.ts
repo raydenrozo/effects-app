@@ -8,16 +8,19 @@ import { Router } from '@angular/router';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor( private router: Router) { }
+  constructor( private router: Router ) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
   }
 
-  irUsuario(txtInput: string){
-    if (!txtInput) {
+  irUsuario( id: string ) {
+
+    if ( !id ) {
       return;
     }
-    this.router.navigate( ['/usuario', txtInput] );
-    console.log('txtInput', txtInput);
+
+    this.router.navigate([ '/usuario', id ]);
+
   }
+
 }
